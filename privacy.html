@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NyxOrbit Privacy Policy</title>
+<meta name="description" content="What NyxOrbit, its launcher and its game server keep about you.">
+<style>
+  :root {
+    color-scheme: dark light;
+    --bg: #0b0c14;
+    --text: #d3d5e4;
+    --head: #f4f1ea;
+    --muted: #8c90a8;
+    --accent: #ffdb42;
+    --rule: #262a3d;
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f6f2;
+      --text: #26283a;
+      --head: #0d0e18;
+      --muted: #5d6178;
+      --accent: #8a6200;
+      --rule: #dcdbe3;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.65 "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+
+  main { max-width: 42rem; margin: 0 auto; padding: 48px 16px 80px; }
+  .site { margin: 0 0 28px; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; }
+  .site a { color: var(--muted); text-decoration: none; }
+  h1 { margin: 0 0 4px; color: var(--head); font-size: 1.9rem; line-height: 1.2; }
+  .date { margin: 0 0 32px; color: var(--muted); font-size: 0.9rem; }
+  h2 { margin: 36px 0 8px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--head); font-size: 1.1rem; }
+  p, li { margin: 0 0 12px; }
+  ul { padding-left: 1.2rem; }
+  li::marker { color: var(--accent); }
+  a { color: var(--accent); text-underline-offset: 3px; overflow-wrap: anywhere; }
+  strong { color: var(--head); font-weight: 600; }
+  code { font-family: Consolas, "Cascadia Mono", monospace; font-size: 0.92em; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+  footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<main>
+
+<p class="site"><a href="index.html">NyxOrbit</a></p>
+
+<h1>Privacy Policy</h1>
+<p class="date">2026-10-08</p>
+
+<p>
+  NyxOrbit is a free online space game for Windows, made by a small
+  independent team. This page says what the game, its launcher and its game
+  server keep about you, and why. It is written from what the code does.
+</p>
+
+<h2>In short</h2>
+<ul>
+  <li>Your account is a name and a password. The server keeps only a hash of the password, never the password.</li>
+  <li>No email, real name or payment details. Nothing in NyxOrbit is sold.</li>
+  <li>No analytics, ads or crash reports, in the launcher or the game.</li>
+  <li>We sell nothing about you and share nothing with anyone.</li>
+</ul>
+
+<h2>On the game server</h2>
+<p>The game server runs Global, NyxOrbit's one server, on a rented machine in the Netherlands. It keeps:</p>
+<ul>
+  <li><strong>Your account:</strong> its name, a salted PBKDF2 hash of your password, when it was made and last signed in, and any staff marks on it (staff role, mute or ban, and when they end).</li>
+  <li><strong>Your sign ins:</strong> a hash of each session token and when it runs out. A session ends after 30 days unused or when you log out.</li>
+  <li><strong>Your pilot:</strong> your ship, items and progress, saved when you leave and every 2 minutes while you fly. Your pilot's name is your account name, and other players see it in the game, in chat and in rankings. Shared records such as clans, rankings, seasons and bounties name the pilots in them.</li>
+</ul>
+<p>
+  <strong>Your network address</strong> is used to slow password guessing and
+  mass sign ups: 5 wrong passwords lock a name for a minute, 50 wrong tries
+  from one address within 10 minutes pause sign ins from it, and one address
+  can make 10 accounts an hour. It also caps how many pilots fly from one
+  address at once. These counts are held in memory only and are never saved
+  with your account.
+</p>
+<p>
+  <strong>Backups:</strong> accounts and pilot saves are copied every 3 hours,
+  so they can be put back after a fault. Copies are kept for up to 60 days,
+  on the server and on the team&#39;s own PC.
+</p>
+<p>
+  <strong>Chat</strong> goes to the pilots who can read its channel: everyone
+  for Global, or your company, clan or group. The server holds the last 300
+  lines in memory to hand them out. Chat is not written to disk or to the
+  server's log, and is gone when the server restarts.
+</p>
+<p>
+  <strong>The server's log</strong> notes sign ups, sign ins, password changes
+  and pilots joining, by account name, and staff actions. It also logs any web
+  request made to the server's port with the address it came from; the
+  launcher and the game make none.
+</p>
+
+<h2>On your PC</h2>
+<p>The launcher keeps its files in <code>%APPDATA%\NyxOrbit Launcher</code>:</p>
+<ul>
+  <li><strong>library.json:</strong> settings, playtime, the server picked last, where the game is installed and its version, and the icon picked for each pilot.</li>
+  <li><strong>launcher.log:</strong> what the launcher did, such as installs and which account signed in.</li>
+  <li><strong>session.json:</strong> only with Stay signed in. Your account name and session token, sealed with Windows data protection so only your Windows account can open it. Never your password.</li>
+  <li><strong>news.cache.json</strong> and <strong>games.local.json:</strong> the latest news, and where the game was installed or found.</li>
+</ul>
+<p>
+  Uninstalling the launcher leaves that folder; delete it to remove them. The
+  game keeps its settings, such as keys, window places and the last pilot
+  name, in your Windows user settings, and writes a log file of its own.
+</p>
+
+<h2>What leaves your PC</h2>
+<ul>
+  <li><strong>To the game server:</strong> sign up and log in send your name and password; after that the session token is sent instead. While the launcher's window is open it asks the server every 10 seconds how many pilots are on, which says nothing about you. The game sends what you do in it, and your chat. Use a password you use nowhere else.</li>
+  <li><strong>To GitHub,</strong> where the downloads are: the game, its updates, the news and the launcher's update check. GitHub sees your address, as with any download.</li>
+  <li><strong>To the Discord app on your PC:</strong> see below.</li>
+</ul>
+<p>Nothing else leaves your PC.</p>
+
+<h2>Discord</h2>
+<p>
+  While the launcher's window is open, and while the game runs, they tell the
+  Discord app on your PC what you are doing, over a local connection, and
+  Discord shows it on your profile. This does not reach us. The game's line
+  shows your ship, rank, company and sector, never credits, cargo or where you
+  are in the sector. Turn the launcher's off in Settings &gt; General, or all
+  of it in Discord's activity privacy settings.
+</p>
+<p>
+  Our Discord bot reads that line from members of the NyxOrbit Discord server
+  to count pilots by company. It keeps no record of who.
+</p>
+<p>
+  Tickets on our Discord server are kept after they close, so a question that
+  comes back has its history. Ask and we delete yours. What Discord itself
+  keeps is covered by Discord's own privacy policy.
+</p>
+
+<h2>Deleting your account</h2>
+<p>
+  Open a ticket in #tickets on our Discord and we delete your account, its
+  sign ins and its pilot save, and take the pilot off clan rosters and
+  bounties. Server log lines already written are not edited, and older
+  backups that still hold the account are gone within 60 days. You can also ask
+  what we hold about you.
+</p>
+
+<h2>Children</h2>
+<p>NyxOrbit is not meant for children under 13. If one has an account, tell us and we delete it.</p>
+
+<h2>Changes</h2>
+<p>The date at the top is this version. Changes that matter are announced on our Discord.</p>
+
+<h2>Contact</h2>
+<p>A ticket in #tickets on our Discord: <a href="https://dsc.gg/nyxorbit">dsc.gg/nyxorbit</a>.</p>
+
+<footer>
+  <a href="terms.html">Terms of Service</a>
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
+
+</main>
+</body>
+</html>
